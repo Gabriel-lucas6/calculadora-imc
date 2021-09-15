@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<script>
+    function imc(){
+        let peso = document.getElementById('peso').value; 
+        let alt = document.getElementById('alt').value; 
+        let result = document.getElementById('result'); 
+        let avali = document.getElementById('avali');
+
+        if(peso==='' && alt!=''){
+            result.innerHTML = ('Informe o seu peso.');
+            avali.innerHTML = ('Informe o seu peso.');
+        }else if(alt==='' && peso!=''){
+            result.innerHTML = ('Informe o sua altura.');
+            avali.innerHTML = ('Informe a sua altura.');
+        }else if(peso==='' && alt===''){
+            result.innerHTML = ('Informe o seu peso.');
+            avali.innerHTML = ('Informe a sua altura.');
+        }else{
+            result.innerHTML = Number(peso)/(Number(alt)*Number(alt));
+
+            if(result.innerHTML < 16){
+                avali.innerHTML = String('Desnutrição Grau III');
+            }else if(result.innerHTML>= 16 && result.innerHTML<17){
+                avali.innerHTML = String('Desnutrição Grau II');
+            }else if(result.innerHTML>=17 && result.innerHTML<=18.4){
+                avali.innerHTML = String('Desnutrição Grau I');
+            }else if(result.innerHTML>18.4 && result.innerHTML<=24.9){
+                avali.innerHTML = String('Saudavel');
+            }else if(result.innerHTML>24.9 && result.innerHTML<=29.9){
+                avali.innerHTML = String('Pre Obesidade');
+            }else if(result.innerHTML>29.9 && result.innerHTML<=34.5){
+                avali.innerHTML = String('Obesidade Grau I');
+            }else if(result.innerHTML>34.5 && result.innerHTML<=39.5){
+                avali.innerHTML = String('Obesidade Grau II');
+            }else if(result.innerHTML>39.5){
+                avali.innerHTML = String('Obesidade Grau III');
+            }
+        }
+    }
+
+</script>
+
+<body >
+        <div id="cabecalho">
+            <h2>Gabriel</h2>
+            <div id="menu">
+                <ul>
+                    <li><a href="pag1.html">Inicio</a></li> 
+                    <li><a href="imc.html">Imc</a></li> 
+                    <li><a href="index.html">Calculadora</a></li> 
+                    <li><a href="">Contatos</a></li> 
+                </ul>  
+            </div>
+        </div>
+            
+
+        <fieldset>
+            
+            <legend>
+                <h3>Calculadora IMC</h3>
+            </legend>
+
+            <div>
+            <label for="peso">Peso (kg):</label>
+            <br>
+            <input id="peso" type="number" />
+            </div>
+
+            <br>
+            <br>
+            
+            <div>
+            <label for="alt">Altura (m):</label>
+            <br>
+            <input id="alt" type="number" />
+            </div>
+
+            <br>
+            <br> 
+           
+            <label for="result">IMC (kg/m^2):</label>
+            <br>
+            <textarea rows="1" cols="20" id="result"  readonly> </textarea>
+            <br>
+            <br>
+            </div>
+
+        
+            <label for="avali">Classificação:</label>
+            <br>
+            <textarea rows="1" cols="20" id="avali"  readonly> </textarea>
+            <br>
+
+            <button onclick="imc();">Calcular</button>
+            <a href="index.html">Vá até a página dois</a>
+        </div>
+        </fieldset>
+
+
+</body>
+</html>
