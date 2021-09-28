@@ -5,28 +5,133 @@
     <meta charset="UTF-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, inicial-scale=1.0">
     <title>Gabriel</title>
+    <link rel="shortcut icon" type="imagex/png" href="img/icone.ico"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="estilo.css">
-    <link rel="shortcut icon" type="imagex/png" href="icone.ico"> 
 </head>
 
 
-<body background ="fundo2.jpg">
+<body>
 
-        <div id="cabecalho">
-          <h2>Gabriel</h2>
-            <div id="menu">
-                <ul>
-                 <li><a href="index.html">Sobre</a></li> 
-                 <li><a href="imc.html">Imc</a></li> 
-                 <li><a href="">Calculadora</a></li> 
-                 <li><a href="">Contatos</a></li> 
-                </ul>  
+    <nav class="logo"> 
+        <a href="index.html">
+            <img src="img/icone3.jpg">
+        </a>
+        <ul>
+            <li><a href="index.html">Início</a></li> 
+            <li><a href="#sobre">Sobre</a></li> 
+            <li><a href="#especialidades">Especialidades</a></li> 
+            <li><a href="#contato">Contatos</a></li> 
+        </ul>  
+    </nav>
+
+    <header>
+        <h1>Gabriel Lucas</h1>
+        <p class="sub">Automação Industrial</p>
+        <a class="botao" href="#sobre">Saiba mais</a>
+    </header>
+
+    <div class="container"> 
+        <section id="sobre"> 
+            <div class="foto">
+                <img src="img/perfil2.jpg">
             </div>
-        </div>
-            <h1>Fábrica de sistemas automátizados</h1> 
-        
+            <div class = "texto">
+                <p class="superior">
+                    SERVIÇO PREMIUM
+                </p>
+                <p class="grande">
+                    Desenvolvimento de soluções industriais e residenciais qualificadas.
+                </p>
+                <p class="pequeno"> 
+                    Técnico em Automação Industrial formado pelo COLTEC-UFMG. Um profissional dedicado e disposto à atender sua demanda.
+                </p>
+
+            </div>
+        </section>
+
+        <section id="especialidades">
+           <h2>ALGUMAS <div class= "titulo">ESPECIALIDADES</div></h2>
+           <div class="pag">
+               <img src="img/comp.png">
+               <h3>Programação</h3>
+               <p>Produção de diversos programas nas linguagens C, Matlab e Javascript. 
+                Assim como, a criação de sites responsivos em HTML E CSS. </p>
+           </div>
+           <div class="pag">
+                <img src="img/domotica.png">
+                <h3>Automação Residencial </h3>
+                <p>Construção de mecanismos para a automação residencial que visam deixar o seu lar cada vez mais confortável. 
+                    Além disso, desenvolvemos CFTV para o aprimoramento da segurança. </p>
+           </div>
+           <div class="pag">
+                <img src="img/eng.png">
+                <h3>Controle de Processos</h3>
+                <p>Desenvolvimento de recursos industriais que buscam obter a melhor forma de controle dos processos fabris. </p>
+           </div>
+
+        </section>
+
+        <section id="contato">
+            <h2>ENTRE EM <div class="titulo2">CONTATO</div></h2>
+            <form>
+                    <h3>Entre com os dados para a efetuação do contato</h3>
+                    <br>
+                    <div class="entrada">
+                        <label for="nome">Nome</label>
+                        <br>
+                        <input type="text" nome="nome" id="nome" required>
+                    </div class="entrada">
+                    <div class="entrada">
+                        <br>
+                        <label for="email">Email</label>
+                        <br>
+                        <input type="email" nome="email" id="email">
+                        
+                    </div>
+                    <div class="entrada">
+                        <br>
+                        <label for="telefone">Telefone Celular</label>
+                        <br>
+                        <input type="number" nome="telefone" id="telefone" required>
+                    
+                    </div>
+                    <div>
+                        <br>
+                        <label for="mensagem">Mensagem</label required>
+                        <br>
+                        <textarea row=6 nome="mensagem" id="mensagem"></textarea>
+                    </div>
+                    <div>
+                        <br>
+                        <button class="botao2" type="submit">Concluido</button> 
+                        
+                    </div>
+                    <br> 
+                    <h3>Seus dados serão armazenados de forma segura e serão utilizados apenas para o contato.</h3>
+            </form>
+
+        </section>
+        <footer>
+            <div class="esquerdo">
+                <p>Contato:</p>
+                <p>biel.lucas@gmail.com</p>
+            </div>
+            <br>
+           <div class="direito">
+                <p>Gabriel Lucas © 2021</p>
+                <p>Todos os direitos reservados</p>
+            </div>
+        </footer>
+
+    </div>
+
+
         
 
 </body>

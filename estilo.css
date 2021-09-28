@@ -1,71 +1,322 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
 body{
-    font-family: verdana;
+    font-family: Poppins;
     margin:0px;
-   
+    
 }
 h1{
-    font-family: Verdana; 
+    font-family: Poppins;
+    font-weight: 2000; 
+    font-size: 1.2cm;
     color: white;
-    text-align: center;
-    font-size: 50x;
-    margin: 0px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+}
+.sub{
+    color: white;
 }
 h2{
     text-align: center;
-    font-family: Verdana; 
-    padding: 30px 0px;
-    color: white;
-    width: 30%;
-    float: left; 
-    background: black;
-    margin: 0px;
+    font-family: Poppins;
+    font-size: 1cm;
 }
-a{
-    font-family: verdana;
-    font-size: 15x;
-    color: white; 
-    text-decoration: none;
-    padding: 5px 20px;
-}
-a:hover{
-    color: black;
-    background: white;
-    font-family: verdana;
-}
-#cabecalho{
-    
-    display: table;
+
+
+.container{
     width: 100%;
-    background: black;
 }
-#menu{
-    background: black;
-    padding: 30px;
-    width: 65%;
-    float: right; 
+
+.logo img{
+    border-radius: 50%;
 }
-#menu ul{
-    display: table;
-    margin: 10px auto;
-    padding: 0px;
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    padding: 5px;
 }
-#menu ul li{
-    display: inline;
+nav ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+nav ul li{
+    text-align: center;
+    width: 100%;
+    font-size: 1.5em;
+    padding: 1%;
+}
+nav ul li a{
+    display: inline-block;
+    padding: 10px 0;
+    width: 100%;
+    text-decoration: none;
 
 }
-footer{
-    position: absolute;
-    bottom: 0;
+
+
+header{
+    background-image: url("img/fundo2.jpg");
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px;
+}
+header p{
+    margin-bottom: 2em;
+    font-size: 1.7em;
+
+}
+.botao{
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #4169E1;
+    font-size: 0.9em;
+    border-radius: 30px;
+}
+
+
+#sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     background-color: black;
     color: white;
-    width: 100%;
-    height: 100px;    
-    text-align: center;
-    line-height: 100px;
-    margin: 0px;
+   
+
 }
+#sobre h2{
+    margin-top: 20px;
+    font-size: 2em;
+}
+.foto img{
+    border-radius: 50%;
+   
+    width: 60%;
+}
+.foto{
+    float: left;
+    width: 50%;
+}
+.texto{
+    float: rigth;
+    width: 50%;
+ 
+    color: white;
+}
+.superior{
+    text-align: left;
+    color: #4169E1;
+}
+.grande{
+    text-align:left;
+}
+.pequeno{
+    text-align:left;
+}
+
+
+.titulo{
+    display: inline-block;
+    color: #4169E1;
+}
+
+
+#especialidades{
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.pag{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    margin-top: 30px;
+}
+#especialidades p{
+    line-height: 1.5em;
+    margin: 2vh;
+    font-size: 1.2em;
+}
+#especialidades img{
+    margin: 10px 0;
+}
+
+.titulo2{
+    display: inline-block;
+    color: black;
+}
+
+
+#contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    background-color:#4169E1;;
+    color: white;
+    justify-content: center;
+    padding: 70px;
+  
+}
+#contato form{
+    margin-top: 30px;
+    background-color: black;
+    max-width: 350px;
+    min-height: 40vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 90%;
+   
+}
+contato input{
+    font: 12px, Poppins;
+}
+.botao2{
+    color:black;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: white;
+    font-size: 0.9em;
+    border-radius: 30px;
+}
+#contato textarea{
+    width: 12em;
+    height: 100px;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(25,25,112);
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding: 80px;
+
+}
+
+
+
+@media screen and (min-width: 768px){
+    nav{
+        flex-direction: row;
+        justify-content: space-around;
+        height: 2cm;
+        position: fixed;
+        width: 100%;
+    }
+    nav ul{
+        flex-direction: row;
+        width: 70%;
+    }
+
+    header{
+        height: 600px;
+        height: 60vh;
+        justify-content: center;
+        padding: 200px;
+    }
+    #sobre{
+        flex-direction:row;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 90vh;
+        justify-content: center;
+        min-height: 80vh;
+        padding: 80px;
+        
+    }
+    #sobre h2{
+        text-align: center;
+        width: 100%;
+    }
+    #sobre div{
+        flex-grow: 1;
+        flex-basis: 300px;
+        padding: 0px 0px;
+    }
+    .superior{
+        text-align: left;
+        color: #4169E1;
+    }
+    .grande{
+        font-family: Poppins;
+        font-weight: 2000; 
+        font-size: 1cm;
+        color: white;
+        text-align:left;
+    }
+    .pequeno{
+        text-align:left;
+       
+    }
+
+
+    #especialidades{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        max-width: 1000px;
+        margin: auto;
+    }
+    #especialidades h2{
+        text-align: center;
+        width: 100%;
+    }
+    .pag{
+        flex-grow: 1;
+        flex-basis: 150px;
+        padding: 30px 10px;
+    }
+    #contato form{
+        max-width: 480px;
+        min-height: 60vh;
+    }
+    #contato .entrada input{
+        width: 35em;
+        height: 3em;
+
+    }
+    #contato textarea{
+        width: 35em;
+        
+    }
+
+
+    footer .esquerdo{
+        float:left; 
+        text-align: justify;
+    }
+    footer .direito{
+        float: right;
+        text-align: justify;
+    }
+}
+
+
+a{
+    font-weight: 500; 
+    font-size: 0.5cm;
+    color: white; 
+    text-decoration: none;
+    padding: 0px 0px;
+}
+
